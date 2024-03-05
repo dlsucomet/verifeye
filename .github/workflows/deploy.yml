@@ -2,8 +2,10 @@ name: deploy
 on:
   push:
     branches:
-      - master
-      - release/0.2.x
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
