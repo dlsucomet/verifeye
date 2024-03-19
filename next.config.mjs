@@ -15,7 +15,7 @@ const withPWA = withPWAInit({
 
 const nextConfig = {
   output: "export",
-  basePath: "/next-pwa",
+  basePath: "/verifeye",
   images: {
     unoptimized: true,
   },
