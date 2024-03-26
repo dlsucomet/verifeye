@@ -1,18 +1,6 @@
-import withPWAInit from "@ducanh2912/next-pwa";
+import withSerwistInit from "@serwist/next";
 
 /** @type {import('next').NextConfig} */
-const withPWA = withPWAInit({
-  dest: "public",
-  cacheOnFrontEndNav: true,
-  aggressiveFrontEndNavCaching: true,
-  reloadOnOnline: true,
-  swcMinify: true,
-  disable: false,
-  workboxOptions: {
-    disableDevLogs: true,
-  }
-});
-
 const nextConfig = {
   output: "export",
   basePath: "/verifeye",
@@ -21,4 +9,19 @@ const nextConfig = {
   },
 };
 
-export default withPWA(nextConfig);
+/** DO NOT TOUCH */
+const withSerwist = withSerwistInit({
+  swSrc: "src/sw.ts",
+  swDest: "public/sw.js",
+  // dest: "public",
+  // cacheOnFrontEndNav: true,
+  // aggressiveFrontEndNavCaching: true,
+  // reloadOnOnline: true,
+  // swcMinify: true,
+  // disable: false,
+  // workboxOptions: {
+  //   disableDevLogs: true,
+  // }
+});
+
+export default withSerwist(nextConfig);

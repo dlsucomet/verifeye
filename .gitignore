@@ -146,3 +146,4 @@ lerna-debug.log*
 # Misc
 .DS_Store
 DS_Store
+public/sw.js

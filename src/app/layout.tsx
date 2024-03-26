@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   manifest: "/manifest.json",
-  title: "TikTok - Make Your Day",
-  description: "TikTok - trends start here. On a device or on the web, viewers can watch and discover millions of personalized short videos. Download the app to get started.",
+  title: "Verifeye",
+  description: "Welcome to Verifeye! Where content meets verifiability.",
   applicationName: "Verifeye",
   generator: "Next.js",
   keywords: ["TikTok", "Reels", "Shorts", "Credibility", "Verifeye", "Verify", "Philippines"],
@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#317EFB",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,9 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="theme-color" content="#317EFB"/>
-      </head>
+      <head />
       <body className={inter.className}>{children}</body>
     </html>
   );
